@@ -1,8 +1,9 @@
 import json
 from flask import Flask, jsonify, abort, make_response, request, url_for
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)
 
 # @auth.login_required
 @app.route('/<string:query>', methods=['GET'])
